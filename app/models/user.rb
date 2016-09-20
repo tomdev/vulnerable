@@ -10,4 +10,8 @@ class User < ActiveRecord::Base
 
   has_attached_file :cv
   do_not_validate_attachment_file_type :cv
+
+  def to_json *args
+    super(force_except: :encrypted_password)
+  end
 end

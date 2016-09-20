@@ -1,3 +1,8 @@
+Rails.application.routes.default_url_options = {
+  host: 'http://unicornflower.herokuapp.com',
+  port: 80,
+}
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
