@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  FLAG = :admin
+
   validates :website, allow_blank: true, format: { with: URI::regexp(%w(http https)) }
 
   has_attached_file :cv

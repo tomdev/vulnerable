@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   root 'home#index'
 
   resources :users, only: [:edit, :update, :show]
+
+  get 'admin', to: 'admin#index'
 end
